@@ -99,9 +99,10 @@ In this section, I am sequentially exploring the spreadsheets and summarize some
     * Missing value distribution 
 
     ![alt text][image1]
+
 After fixing the typo or document error, Move unknown value to NA. We will get the distribution as below.
 
-    * Missing value distribution after change unknown value to NA
+   * Missing value distribution after change unknown value to NA
 
     ![alt text][image2]
 
