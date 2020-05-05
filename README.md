@@ -24,7 +24,7 @@
 1. [Introduction](#introduction)
 1. [Installation](#installation)
 1. [File Descriptions](#files)
-1. [Results](#results)
+1. [Results and Discussion](#results)
 1. [Terms & Conditions](#terms)
 
 
