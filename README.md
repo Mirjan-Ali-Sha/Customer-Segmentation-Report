@@ -80,6 +80,8 @@ Or you can run below command to setup the environment.
 
 
 ### Results and Discussion: <a name="results"></a>:
+This part also published on my own blogspot [post,](https://multiaccessservice.blogspot.com/2020/05/customer-segmentation-report-for-arvato.html)
+
 This is a practical walk-through of customer clustering and prediction. If you are interested in machine learning. If you are interested in how machine learning can help identify target customers, you are the best audience of this article. I will give you a brief guide on how to use machine learning to solve clustering and prediction.
 First, I will give you some brief introduction to the dataset. Below is some description of it. We will use the 4 spreadsheets below to help the company identify its target customers.
 ```
