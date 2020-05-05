@@ -118,47 +118,48 @@ For mixed type categorical feature, we will split or translate it into the nomin
 
 And for quantitative feature…
 
-   * Quantitative feature
+Quantitative feature
 
-    ![alt text][image4]
+![](images/quantitative.png)
 
 We can find many features are right-skewed. After a log transform, outlier caping, and some further analyze. We can get more normalized distribution as below.
 
-   * Quantitative feature after log transform and outlier caping
+Quantitative feature after log transform and outlier caping
 
-    ![alt text][image5]
+![](images/cap_outlier.png)
 
 After we actually drop the features, we can get below missing value distribution.
-   * Drop
 
-    ![alt text][image6]
+Drop
+
+![](images/drop.png)
 
 Then we will start to check population feature coverage with a customer, If it is outside the bounds of population, we will NA it. And, start to fill NA with meaning value. For categorical feature, we will fill max occurs value, For quantitative feature, we will fill median. After that, apply one-hot encoding for the nominal feature. And the end of this part, I create a clean_data function for easily data preprocessing.
 
 #### Part 1: Customer Segmentation Report
 In this part, I will use the data created in Part 0 to do customer segmentation. First, I use [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) to scale the data to a z-score space and apply [PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html).
 
-   * PCA
+PCA
 
-    ![alt text][image7]
+![](images/pca.png)
 
 We can find that 90% variance is bounded by the first 200 dimensions. Then, I use [MiniBatchKMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MiniBatchKMeans.html) to fast find optimized K for [KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) on these 200 dimensions.
 
-   * KMeans
+KMeans
 
-    ![alt text][image8]
+![](images/kmeans.png)
 
 According to the elbow method, we set K = 20 for KMeans. And apply KMeans, we can get 20 clusters as below.
 
-   * Cluster
+Cluster
 
-    ![alt text][image9]
+![](images/cluster.png)
 
 We can find that cluster 4 and 2 are the most customers like and unlike cluster. And we further analyze the feature difference between these 2 clusters.
 
-   * Feature difference
+Feature difference
 
-    ![alt text][image10]
+![](images/diff_feature.png)
 
 Finally, we have some conclusions about the customers. They drive the small car, younger than 25 years old, low-income owners, no household, traditional mind, no luxury car, don’t like online purchase.
 
@@ -166,21 +167,21 @@ Finally, we have some conclusions about the customers. They drive the small car,
 
 In this part, I will pick a machine-learning algorithm to train and predict customer. First, let’s take a look at our training data.
 
-   * Data distribution
+Data distribution
 
-    ![alt text][image11]
+![](images/train.png)
 
 We can see that this is an unbalanced dataset. After data cleaning and scaling, I will use [StratifiedShuffleSplit](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html), because it can preserve original data percentage in each fold. For metrics selection, because finally, this project will submit to Kaggle. I use [AUC for the ROC curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic#Area_under_the_curve), which is as same as Kaggle. And for model selection, We pick 4 models to compare their performance: [Decision Tree](https://scikit-learn.org/stable/modules/tree.html), [SVM](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html), [AdaBoost](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html), [XGBoost](https://xgboost.readthedocs.io/en/latest/). And finally, use [XGBoost](https://xgboost.readthedocs.io/en/latest/) as it is outstanding compared to the others.
 
-   * Model selection
+Model selection
 
-    ![alt text][image12]
+![](images/model.png)
 
 After fine-tuning the hyperparameters, I got this top 20 feature importance score.
 
-   * XGBoost
+XGBoost
 
-    ![alt text][image13]
+![](images/xgboost.png)
 
 
 From above, we can find D19_SOZIALES, D19_KONSUMTYP_MAX is the most important factor to affect the result, but we have no document describe them. But, at lease from the remaining features, we can let the company pay more attention to their customer’s traditional mind, money save, household and luxury car owner.
