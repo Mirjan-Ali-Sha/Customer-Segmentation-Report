@@ -99,11 +99,13 @@ In this section, I am sequentially exploring the spreadsheets and summarize some
     * Missing value distribution 
 
     ![alt text][image1]
+
 After fixing the typo or document error, Move unknown value to NA. We will get the distribution as below.
 
     * Missing value distribution after change unknown value to NA
 
     ![alt text][image2]
+
 To prevent data missing too large, We will choose 70% as a missing value threshold to drop features. With this drop, We will lose around 5x features.
 
 And we will start to drop features according to their type, With the # unique value box plot as below. We can find that some documented/undocumented nominal or ordinal features have a little feature have # unique value more than 15, We will set 15 as # unique value drop threshold to drop nominal or ordinal categorical feature.
@@ -111,6 +113,7 @@ And we will start to drop features according to their type, With the # unique va
     * Categorical feature
 
     ![alt text][image3]
+
 For mixed type categorical feature, we will split or translate it into the nominal or ordinal feature.
 
 And for quantitative feature…
@@ -118,6 +121,7 @@ And for quantitative feature…
     * Quantitative feature
 
     ![alt text][image4]
+
 We can find many features are right-skewed. After a log transform, outlier caping, and some further analyze. We can get more normalized distribution as below.
 
     * Quantitative feature after log transform and outlier caping
