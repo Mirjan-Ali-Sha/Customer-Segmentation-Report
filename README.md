@@ -98,13 +98,13 @@ In this section, I am sequentially exploring the spreadsheets and summarize some
 
     * Missing value distribution 
 
-    ![alt text][image1]
+    ![](./images/missing_value.png)
 
 After fixing the typo or document error, Move unknown value to NA. We will get the distribution as below.
 
    * Missing value distribution after change unknown value to NA
 
-    ![alt text][image2]
+    ![](./images/formatit_missing_value.png)
 
 To prevent data missing too large, We will choose 70% as a missing value threshold to drop features. With this drop, We will lose around 5x features.
 
@@ -112,7 +112,7 @@ And we will start to drop features according to their type, With the # unique va
 
    * Categorical feature
 
-    ![alt text][image3]
+    ![](./images/categorical.png)
 
 For mixed type categorical feature, we will split or translate it into the nominal or ordinal feature.
 
