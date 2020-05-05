@@ -93,11 +93,10 @@ And these 2 are the metadata to help describe above spreadsheets.
 * DIAS Attributes — Values 2017.xlsx: detailed mapping of data values for each feature in alphabetical order.
 This project is split into three parts. First, I explore the dataset and find the data characteristics. Then, use unsupervised learning to do customer clustering. Finally, I will use supervised learning to make a model to predict customer. So, don’t stop. Let’s get started on my journey.
 #### Part 0: Get to Know the Data:
-* Data Preprocessing and Explanation:
-
+Data Preprocessing and Explanation:
 In this section, I am sequentially exploring the spreadsheets and summarize some data structure for further data preprocessing. This part is very important but really tedious. Because the further analyze all dependent on this part. In this part, I will separate the data into 5 types: binary, nominal, ordinal, mixed category, and quantitative feature. Because the data preprocessing step for these features have a little different. I will also check the different unknown value of these features. But first, let’s take a look at the missing value distribution of the general population and customers.
 
-   * Missing value distribution 
+    * Missing value distribution 
 
     ![alt text][image1]
 
@@ -136,7 +135,7 @@ After we actually drop the features, we can get below missing value distribution
 
 Then we will start to check population feature coverage with a customer, If it is outside the bounds of population, we will NA it. And, start to fill NA with meaning value. For categorical feature, we will fill max occurs value, For quantitative feature, we will fill median. After that, apply one-hot encoding for the nominal feature. And the end of this part, I create a clean_data function for easily data preprocessing.
 
-#### * Part 1: Customer Segmentation Report
+#### Part 1: Customer Segmentation Report
 In this part, I will use the data created in Part 0 to do customer segmentation. First, I use [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) to scale the data to a z-score space and apply [PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html).
 
    * PCA
@@ -163,7 +162,7 @@ We can find that cluster 4 and 2 are the most customers like and unlike cluster.
 
 Finally, we have some conclusions about the customers. They drive the small car, younger than 25 years old, low-income owners, no household, traditional mind, no luxury car, don’t like online purchase.
 
-#### * Part 2: Supervised Learning Model
+#### Part 2: Supervised Learning Model
 
 In this part, I will pick a machine-learning algorithm to train and predict customer. First, let’s take a look at our training data.
 
