@@ -96,23 +96,23 @@ This project is split into three parts. First, I explore the dataset and find th
 Data Preprocessing and Explanation:
 In this section, I am sequentially exploring the spreadsheets and summarize some data structure for further data preprocessing. This part is very important but really tedious. Because the further analyze all dependent on this part. In this part, I will separate the data into 5 types: binary, nominal, ordinal, mixed category, and quantitative feature. Because the data preprocessing step for these features have a little different. I will also check the different unknown value of these features. But first, let’s take a look at the missing value distribution of the general population and customers.
 
-    * Missing value distribution 
+Missing value distribution 
 
-    ![](./images/missing_value.png)
+![](images/missing_value.png)
 
 After fixing the typo or document error, Move unknown value to NA. We will get the distribution as below.
 
-   * Missing value distribution after change unknown value to NA
+Missing value distribution after change unknown value to NA
 
-    ![](./images/formatit_missing_value.png)
+![](images/formatit_missing_value.png)
 
 To prevent data missing too large, We will choose 70% as a missing value threshold to drop features. With this drop, We will lose around 5x features.
 
 And we will start to drop features according to their type, With the # unique value box plot as below. We can find that some documented/undocumented nominal or ordinal features have a little feature have # unique value more than 15, We will set 15 as # unique value drop threshold to drop nominal or ordinal categorical feature.
 
-   * Categorical feature
+Categorical feature
 
-    ![](./images/categorical.png)
+![](images/categorical.png)
 
 For mixed type categorical feature, we will split or translate it into the nominal or ordinal feature.
 
