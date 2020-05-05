@@ -94,9 +94,10 @@ And these 2 are the metadata to help describe above spreadsheets.
 This project is split into three parts. First, I explore the dataset and find the data characteristics. Then, use unsupervised learning to do customer clustering. Finally, I will use supervised learning to make a model to predict customer. So, don’t stop. Let’s get started on my journey.
 #### Part 0: Get to Know the Data:
 * Data Preprocessing and Explanation:
+
 In this section, I am sequentially exploring the spreadsheets and summarize some data structure for further data preprocessing. This part is very important but really tedious. Because the further analyze all dependent on this part. In this part, I will separate the data into 5 types: binary, nominal, ordinal, mixed category, and quantitative feature. Because the data preprocessing step for these features have a little different. I will also check the different unknown value of these features. But first, let’s take a look at the missing value distribution of the general population and customers.
 
-    * Missing value distribution 
+   * Missing value distribution 
 
     ![alt text][image1]
 
