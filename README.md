@@ -209,9 +209,11 @@ In addition to Udacity's Terms of Use and other policies, your downloading and u
 
 1. You agree to AZ Direct GmbH's General Terms provided below and that you only have the right to download and use the AZ Direct GmbH data solely to complete the data mining task which is part of the Unsupervised Learning and Bertelsmann Capstone projects for the Udacity Data Science Nanodegree program.
 
-1. You are prohibited from using the AZ Direct GmbH data in any other context.
+2. You are prohibited from using the AZ Direct GmbH data in any other context.
 
-1. You are also required and hereby represent and warrant that you will delete any and all data you downloaded within 2 weeks after your completion of the Unsupervised Learning and Bertelsmann Capstone projects and the program.
+3. You are also required and hereby represent and warrant that you will delete any and all data you downloaded within 2 weeks after your completion of the Unsupervised Learning and Bertelsmann Capstone projects and the program.
 
-1. If you do not agree to these additional terms, you will not be allowed to access the data for this project.
+4. If you do not agree to these additional terms, you will not be allowed to access the data for this project.
 The full terms are provided in the workspace below. You will then be asked in the next workspace to agree to these terms before gaining access to the project, which you may also choose to download if you would like to read in full the terms.
+
+Before Run this project Check 'requirements.123' file if any package not required delete that and save this file as 'requirements.txt' and run it with whole projects.
